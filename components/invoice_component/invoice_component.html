@@ -1,2 +1,14 @@
-<h1>Invoice For Client {{ctrl.clientId}}</h1>
-<p>This is a p tag</p>
+<h1>Invoice For Client {{ctrl.invoice.id}}</h1>
+
+<table>
+  <thead>
+    <th>Title</th>
+    <th>Subtotal</th>
+  </thead>
+  <tbody ng-repeat="item in ctrl.invoice.lineItems">
+    <tr>
+      <td>{{item.title}}</td>
+      <td>{{item.subtotal}}</td>
+    </tr>
+  </tbody>
+</table>

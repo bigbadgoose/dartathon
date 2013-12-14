@@ -1,5 +1,7 @@
 library invoice_component;
 
+import '../../models/invoice.dart';
+
 import 'package:angular/angular.dart';
 
 @NgComponent(
@@ -8,15 +10,12 @@ import 'package:angular/angular.dart';
     cssUrl: 'components/invoice_component/invoice_component.css',
     publishAs: 'ctrl',
     map: const {
-      'client-id' : '@client'
+      'invoice' : '=>invoice'  
     }
 )
 class InvoiceComponent {
   
-  int clientId;
-  
-  set client(String clientId) {
-    this.clientId = int.parse(clientId);
-  }
+  String clientId;
+  Invoice invoice;
   
 }

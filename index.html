@@ -14,9 +14,10 @@
 <div invoice-controller class="border well" ng-cloak>
 
   <h2>Dartathon</h2>
-
-  <invoice client-id="5"></invoice>
-  <invoice client-id="1"></invoice>
+  
+  <div ng-repeat="invoice in ctrl.invoices">
+    <invoice invoice="invoice"></invoice>
+  </div>
 
 </div>
 
