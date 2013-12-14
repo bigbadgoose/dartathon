@@ -1,0 +1,4 @@
+library charge;
+
+class Charge {
+}

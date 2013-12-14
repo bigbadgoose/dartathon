@@ -1,9 +1,8 @@
 library project;
 
-import 'client.dart';
+import 'invoice.dart';
 
 class Project {
-  Client client;
-  
-  Project(Client this.client);
+  String name;
+  List<Invoice> invoices;
 }

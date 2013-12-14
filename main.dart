@@ -1,7 +1,10 @@
 import 'package:di/di.dart';
 import 'package:angular/angular.dart';
 import 'package:angular/playback/playback_http.dart';
-import 'todo.dart';
+
+import 'controllers/server_controller.dart';
+import 'controllers/no_server_controller.dart';
+import 'controllers/invoice_controller.dart';
 
 // Components
 import 'components/invoice_component/invoice_component.dart';
@@ -30,7 +33,7 @@ main() {
 
   print(window.location.search);
   var module = new Module()
-    ..type(TodoController)
+    ..type(InvoiceController)
     ..type(InvoiceComponent);
 
   // If these is a query in the URL, use the server-backed

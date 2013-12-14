@@ -1,9 +1,7 @@
 library invoice;
 
-import 'client.dart';
+import 'line_item.dart';
 
 class Invoice {
-  Client client;
-
-  Invoice(Client this.client);
+  List<LineItem> lineItems;
 }
