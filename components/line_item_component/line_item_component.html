@@ -1,2 +1,13 @@
-<h1>Invoice For Client {{ctrl.clientId}}</h1>
-<line-item></line-item>
+<div>
+  <h1>A Line Item</h1>
+  <ul>
+    <li>Title {{ctrl.lineItem.title}}</li>
+    <li><a ng-click="ctrl.toggleCharges()" href="">See All Charges</a></li>
+    <li ng-if="ctrl.isChargesShown">
+      <h2>Charges</h2>
+      <ul>
+        <li ng-repeat="charge in ctrl.lineItem.charges">A Charge</li>
+      </ul>
+    </li>
+  </ul>
+</div>

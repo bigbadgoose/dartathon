@@ -8,6 +8,7 @@ import 'controllers/invoice_controller.dart';
 
 // Components
 import 'components/invoice_component/invoice_component.dart';
+import 'components/line_item_component/line_item_component.dart';
 
 @MirrorsUsed(targets: const[
   'angular',
@@ -34,7 +35,8 @@ main() {
   print(window.location.search);
   var module = new Module()
     ..type(InvoiceController)
-    ..type(InvoiceComponent);
+    ..type(InvoiceComponent)
+    ..type(LineItemComponent);
 
   // If these is a query in the URL, use the server-backed
   // TodoController.  Otherwise, use the stored-data controller.

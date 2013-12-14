@@ -1,14 +1,2 @@
-<h1>Invoice For Client {{ctrl.invoice.id}}</h1>
-
-<table>
-  <thead>
-    <th>Title</th>
-    <th>Subtotal</th>
-  </thead>
-  <tbody ng-repeat="item in ctrl.invoice.lineItems">
-    <tr>
-      <td>{{item.title}}</td>
-      <td>{{item.subtotal}}</td>
-    </tr>
-  </tbody>
-</table>
+<h1>Invoice Id {{ctrl.invoice.id}}</h1>
+<line-item line-item="item" ng-repeat="item in ctrl.invoice.lineItems"></line-item>

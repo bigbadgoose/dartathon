@@ -8,4 +8,8 @@ class LineItem {
   double subtotal = 100.0;
   DateTime date = new DateTime.now();
   List<Charge> charges = [];
+  
+  LineItem() {
+    this.charges.add(new Charge());
+  }
 }
