@@ -1,8 +1,8 @@
 library charge;
 
 class Charge {
-  String title;
-  String desc;
-  double costValue;
-  String costType;
+  String title = 'Charge Title';
+  String desc = 'Charge Desc';
+  double costValue = 100.0;
+  String costType = 'dollar';
 }

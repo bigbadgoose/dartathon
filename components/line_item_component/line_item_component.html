@@ -1,12 +1,14 @@
 <div>
   <h1>A Line Item</h1>
   <ul>
-    <li>Title {{ctrl.lineItem.title}}</li>
+    <li>Date: {{ctrl.lineItem.date}}</li>
+    <li>Title: {{ctrl.lineItem.title}}</li>
+    <li>Total: {{ctrl.lineItem.subtotal()}}</li>
     <li><a ng-click="ctrl.toggleCharges()" href="">See All Charges</a></li>
     <li ng-if="ctrl.isChargesShown">
       <h2>Charges</h2>
       <ul>
-        <li ng-repeat="charge in ctrl.lineItem.charges">A Charge</li>
+        <li ng-repeat="charge in ctrl.lineItem.charges">{{charge.title}} -  {{charge.costValue}} {{charge.costType}}</li>
       </ul>
     </li>
   </ul>
