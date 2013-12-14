@@ -1,7 +1,9 @@
-name: dartathon
-description: A sample Polymer application
+name: angular_dart_demo
+version: 0.0.2
+environment:
+  sdk: '>=0.8.10+6 <2.0.0'
 dependencies:
-    polymer: any
-transformers:
-- polymer:
-    entry_points: web/dartathon.html
+  angular: '>=0.9.0 <0.10.0'
+  browser: '>=0.9.0 <0.10.0'
+  js: '>=0.2.0'
+  unittest: '>=0.9.0'

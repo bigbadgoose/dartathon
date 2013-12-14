@@ -1,0 +1,4 @@
+library client;
+
+class Client {
+}
