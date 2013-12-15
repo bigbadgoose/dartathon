@@ -1,3 +1,62 @@
-h1 {
-  color: red;
+
+
+.btn {
+  display: inline-block;
+  padding: .1em .5em;;
+  text-decoration: none;
+  background: #000;
+  color: white;
+  border-radius: 2px;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  position: absolute;
+  top: 7px;
+  right: -20px;
+}
+
+.btn:hover {
+  text-decoration: none;
+  background: #444;
+  color: white;
+}
+
+
+.tabular {
+  border-collapse: collapse;
+  border-spacing: 2px;
+  width: 100%;
+}
+
+
+.tabular th, .tabular td {
+  padding: .5em 2em;
+  text-align: left;
+  position: relative;
+}
+.tabular tbody tr {
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+
+td.date {
+  width: 20%;
+}
+
+td.descr {
+  width: 60%;
+}
+
+td.subtotal {
+  width: 20%;
+  text-align: right;
+  font-weight: bold;
+}
+
+tr > td {
+  border-bottom: 1px solid #ccc;
 }
