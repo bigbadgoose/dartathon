@@ -403,8 +403,14 @@ input[type="submit"].btn {
   .alert p {
     margin: 0; }
 
-#header {
-  position: relative; }
+#main-header {
+  position: relative;
+  overflow: hidden; }
+
+#main-content {
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 2px; }
 
 #logo .logo-text {
   visibility: hidden; }
@@ -415,7 +421,7 @@ input[type="submit"].btn {
 #main-nav nav {
   margin: 1em 0; }
 
-#footer {
+#main-footer {
   margin: 2em 0;
   padding-top: 1em; }
 
@@ -431,8 +437,3 @@ h1.title {
 
 .hero p {
   font-size: 1.3em; }
-
-#invoice {
-  background: #fff;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-  border-radius: 2px; }

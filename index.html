@@ -1,23 +1,37 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/todo.css">
-    <script src="main.dart" type="application/dart"></script>
-    <script src="packages/browser/dart.js"></script>
-    <script src="packages/browser/interop.js"></script>
+  <meta charset="UTF-8">
+  <title></title>
+  <!-- link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/todo.css" -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="main.dart" type="application/dart"></script>
+  <script src="packages/browser/dart.js"></script>
+  <script src="packages/browser/interop.js"></script>
 </head>
-<body ng-app>
+<body ng-app class="boundary">
 
 
 <div ng-hide="true" class="border well loading">Loading...</div>
 
-<div invoice-controller class="border well" ng-cloak>
+<header id="main-header">
+  <img src="assets/img/header.png" alt="" />
+</header>
+
+
+<div invoice-controller class="block" id="main-content" ng-cloak>
 
   <h2>Dartathon</h2>
-  
+
   <invoice invoice="invoice" ng-repeat="invoice in ctrl.invoices"></invoice>
 
 </div>
+
+
+<footer class="block" id="main-footer">
+  
+</footer>
 
 
 </body>

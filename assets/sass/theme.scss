@@ -124,8 +124,15 @@ input[type="submit"].btn {
 
 // -------------------------- HEADER
 
-#header {
+#main-header {
   position: relative;
+  overflow: hidden;
+}
+
+#main-content {
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0,0,0,.1);
+  border-radius: 2px;
 }
 
 #logo {
@@ -137,11 +144,7 @@ input[type="submit"].btn {
   nav { margin: 1em 0; }
 }
 
-
-
-// -------------------------- FOOTER
-
-#footer {
+#main-footer {
   margin: 2em 0;
   padding-top: 1em;
 }
@@ -169,8 +172,3 @@ h1.title {
 }
 
 
-#invoice {
-  background: #fff;
-  box-shadow: 0 0 6px rgba(0,0,0,.1);
-  border-radius: 2px;
-}
