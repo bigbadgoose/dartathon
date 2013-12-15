@@ -1,5 +1,5 @@
 <div>
-  <div>{{ctrl.lineItem.displayDate()}} - {{ctrl.lineItem.title}} - {{ctrl.lineItem.subtotal()}} - <a ng-if="ctrl.lineItem.charges.length > 1" ng-click="ctrl.toggleCharges()" href="">See All Charges</a></div>
+  <div>{{ctrl.lineItem.displayDate()}} - {{ctrl.lineItem.title}} - {{ctrl.lineItem.subtotal()}} <a ng-if="ctrl.lineItem.charges.length > 1" ng-click="ctrl.toggleCharges()" href="">See All Charges</a></div>
   <div ng-if="ctrl.isChargesShown">
     <div ng-repeat="charge in ctrl.lineItem.charges">{{charge.title}} -  {{charge.costValue}} {{charge.costType}}</div>
   </div>

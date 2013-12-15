@@ -14,8 +14,7 @@ class InvoiceController {
 
   InvoiceController(ServerController serverController) {
     Invoice invoice1 = new Invoice(1);
-    Invoice invoice2 = new Invoice(2);
-    this.invoices.addAll([invoice1, invoice2]);
+    this.invoices.addAll([invoice1]);
     serverController.init(this);
   }
 }
