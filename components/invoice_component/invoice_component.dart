@@ -18,6 +18,8 @@ import 'package:angular/angular.dart';
 class InvoiceComponent {
   String clientId;
   Invoice invoice;
+  String title = 'A Line Item';
+  String amount = '0';
   bool isFormShown = false;
 
   newLineItem() {
@@ -25,6 +27,17 @@ class InvoiceComponent {
   }
   
   createLineItem() {
-    this.invoice.lineItems.add(new LineItem('A New Line Item', 'Desc', [new Charge('New Charge', 100.0, 'dollar')], new DateTime.now()));
+    if (this.title.isNotEmpty && this.amount.isNotEmpty) {
+      LineItem lineItem = new LineItem(
+          this.title,
+          'desc',
+          [new Charge(this.title, double.parse(this.amount), 'dollar')],
+          new DateTime.now()
+      );
+      this.invoice.lineItems.add(lineItem);
+      this.title = 'A Line Item';
+      this.amount = '0';
+      this.isFormShown = false;
+    }
   }
 }

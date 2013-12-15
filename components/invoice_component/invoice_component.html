@@ -8,11 +8,11 @@
   <h3>New Line Item</h3>
   <div>
     <label>Title</label>
-    <input type="text" />
+    <input type="text" ng-model="ctrl.title" />
   </div>
   <div>
     <label>Amount</label>
-    <input type="text" />
+    <input type="text" ng-model="ctrl.amount" />
   </div>
   <div>
     <input ng-click="ctrl.createLineItem()" type="submit" />
