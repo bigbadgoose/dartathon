@@ -14,7 +14,7 @@ class LineItem {
     double sum = 0.0;
     
     for (var charge in this.charges) {
-      if (charge.costType == 'percentage') {
+      if (charge.costType == 'percent') {
         sum = sum + (sum * (charge.costValue / 100.0)); 
       } else {
         sum = sum + charge.costValue;  

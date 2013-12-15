@@ -17,8 +17,9 @@ import 'package:angular/angular.dart';
 class InvoiceComponent {
   String clientId;
   Invoice invoice;
+  bool isFormShown = false;
   
   newLineItem() {
-    this.invoice.lineItems.add(new LineItem());
+    this.isFormShown = !this.isFormShown;
   }
 }
