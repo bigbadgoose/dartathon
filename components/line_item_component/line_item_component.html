@@ -1,20 +1,18 @@
-<div>
-  <div>{{ctrl.lineItem.displayDate()}} - {{ctrl.lineItem.title}} - {{ctrl.lineItem.subtotal()}} - <a ng-click="ctrl.toggleCharges()" href="">See All Charges</a></div>
-  <div ng-if="ctrl.isChargesShown">
-    <div ng-repeat="charge in ctrl.lineItem.charges">{{charge.title}} -  {{charge.costValue}} {{charge.costType}}</div>
-  </div>
-</div>
 
 
-
-
-
-
-
-<!-- table class="tabular">
+<table class="tabular">
   <tr>
-    <td>{{ctrl.lineItem.date}}</td>
-    <td>{{ctrl.lineItem.title}}</td>
-    <td>{{ctrl.lineItem.subtotal}}</td>
+    <td>{{ctrl.lineItem.displayDate()}}</td>
+    <td>
+      {{ctrl.lineItem.title}}
+      <div ng-if="ctrl.isChargesShown">
+        <div ng-repeat="charge in ctrl.lineItem.charges">
+          {{charge.title}} -  {{charge.costValue}} {{charge.costType}}
+      </div>
+
+    </td>
+    <td>{{ctrl.lineItem.subtotal()}}
+    
+    </td>
   </tr>
-</table -->
+</table>
