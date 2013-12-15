@@ -1,10 +1,10 @@
 
-
 <table class="tabular">
   <tr>
     <td>{{ctrl.lineItem.displayDate()}}</td>
     <td>
       {{ctrl.lineItem.title}}
+<a ng-if="ctrl.lineItem.charges.length > 1" ng-click="ctrl.toggleCharges()" href="">See All Charges</a>
       <div ng-if="ctrl.isChargesShown">
         <div ng-repeat="charge in ctrl.lineItem.charges">
           {{charge.title}} -  {{charge.costValue}} {{charge.costType}}
