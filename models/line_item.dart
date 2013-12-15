@@ -1,5 +1,6 @@
 library line_item;
 
+import 'package:intl/intl.dart';
 import 'charge.dart';
 
 class LineItem {
@@ -9,6 +10,10 @@ class LineItem {
   List<Charge> charges = [];
   
   LineItem(this.title, this.desc, this.charges, this.date);
+  
+  String displayDate() {
+    return new DateFormat('yyyy/MM/dd').format(this.date);
+  }
   
   double subtotal() {
     double sum = 0.0;

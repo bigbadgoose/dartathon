@@ -2,6 +2,7 @@ library invoice_component;
 
 import '../../models/invoice.dart';
 import '../../models/line_item.dart';
+import '../../models/charge.dart';
 
 import 'package:angular/angular.dart';
 
@@ -18,8 +19,12 @@ class InvoiceComponent {
   String clientId;
   Invoice invoice;
   bool isFormShown = false;
-  
+
   newLineItem() {
     this.isFormShown = !this.isFormShown;
+  }
+  
+  createLineItem() {
+    this.invoice.lineItems.add(new LineItem('A New Line Item', 'Desc', [new Charge('New Charge', 100.0, 'dollar')], new DateTime.now()));
   }
 }

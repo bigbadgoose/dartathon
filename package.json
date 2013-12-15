@@ -4,6 +4,7 @@
   "description": "Optional web server for Angular.dart's todo demo",
   "main": "webserver.js",
   "dependencies": {
+    "intl": "any",
     "dart2jsaas": "~0.0.4",
     "connect": "~2.9.0"
   },
