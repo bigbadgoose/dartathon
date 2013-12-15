@@ -2,8 +2,26 @@
 
 <line-item line-item="item" ng-repeat="item in ctrl.invoice.lineItems"></line-item>
 
-<button ng-click="ctrl.newLineItem()">Add Line Item</button>
+<button ng-click="ctrl.newLineItem()">New Line Item</button>
 
 <div ng-if="ctrl.isFormShown">
-  <h3>Show Form</h3>
+  <h3>New Line Item</h3>
+  <div>
+    <label>Title</label>
+    <input type="text" />
+  </div>
+  <div>
+    <label>Cost Value</label>
+    <input type="text" />
+  </div>
+  <div>
+    <label>Cost Type</label>
+    <select>
+      <option>Dollar</option>
+      <option>Percent</option>
+    </select>
+  </div>
+  <div>
+    <input ng-click="ctrl.createLineItem()" type="submit" />
+  </div>
 </div>
