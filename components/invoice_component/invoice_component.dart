@@ -21,6 +21,14 @@ class InvoiceComponent {
   String title = 'A Line Item';
   String amount = '0';
   bool isFormShown = false;
+  
+  double total() {
+    double total = 0.0;
+    for (LineItem li in invoice.lineItems){
+      total = total + li.subtotal();
+    }
+    return total;
+  }
 
   newLineItem() {
     this.isFormShown = !this.isFormShown;
