@@ -1,2 +1,9 @@
 <h1>Invoice Id {{ctrl.invoice.id}}</h1>
+
 <line-item line-item="item" ng-repeat="item in ctrl.invoice.lineItems"></line-item>
+
+<button ng-click="ctrl.newLineItem()">Add Line Item</button>
+
+<div ng-if="ctrl.isFormShown">
+  <h3>Show Form</h3>
+</div>

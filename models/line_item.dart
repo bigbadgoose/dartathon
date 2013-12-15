@@ -5,11 +5,22 @@ import 'charge.dart';
 class LineItem {
   String title = 'A Hardcoded Title';
   String desc = 'A Hardcoded Desc';
-  double subtotal = 100.0;
   DateTime date = new DateTime.now();
   List<Charge> charges = [];
   
-  LineItem() {
-    this.charges.add(new Charge());
+  LineItem(this.title, this.desc, this.charges, this.date);
+  
+  double subtotal() {
+    double sum = 0.0;
+    
+    for (var charge in this.charges) {
+      if (charge.costType == 'percent') {
+        sum = sum + (sum * (charge.costValue / 100.0)); 
+      } else {
+        sum = sum + charge.costValue;  
+      }
+    }
+    
+    return sum;
   }
 }

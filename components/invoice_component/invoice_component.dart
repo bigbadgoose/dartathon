@@ -1,6 +1,7 @@
 library invoice_component;
 
 import '../../models/invoice.dart';
+import '../../models/line_item.dart';
 
 import 'package:angular/angular.dart';
 
@@ -14,8 +15,11 @@ import 'package:angular/angular.dart';
     }
 )
 class InvoiceComponent {
-  
   String clientId;
   Invoice invoice;
+  bool isFormShown = false;
   
+  newLineItem() {
+    this.isFormShown = !this.isFormShown;
+  }
 }
