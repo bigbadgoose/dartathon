@@ -1,10 +1,8 @@
-
-
 .btn {
   display: inline-block;
-  padding: .1em .5em;;
+  padding: .1em .5em;
   text-decoration: none;
-  background: #000;
+  background: #c0cacf;
   color: white;
   border-radius: 2px;
   -webkit-transition: all 0.15s ease-out;
@@ -12,8 +10,9 @@
   -ms-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
   position: absolute;
-  top: 7px;
-  right: -20px;
+  top: 10px;
+  right: -10px;
+  font-size: 10px;
 }
 
 .btn:hover {
@@ -45,6 +44,7 @@
 
 td.date {
   width: 20%;
+  font-size: 12px;
 }
 
 td.descr {

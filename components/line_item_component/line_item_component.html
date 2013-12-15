@@ -11,7 +11,7 @@
       </div>
 
     </td>
-    <td class="subtotal">{{ctrl.lineItem.subtotal()}}
+    <td class="subtotal">$ {{ctrl.lineItem.subtotal()}}
       <a class="btn"
           ng-if="ctrl.lineItem.charges.length > 1"
           ng-click="ctrl.toggleCharges()" href="">

@@ -126,13 +126,14 @@ input[type="submit"].btn {
 
 #main-header {
   position: relative;
+  border-radius: 3px;
   overflow: hidden;
 }
 
 #main-content {
   background: #fff;
   box-shadow: 0 0 6px rgba(0,0,0,.1);
-  border-radius: 2px;
+  border-radius: 3px;
   margin-top: 2em;
 }
 

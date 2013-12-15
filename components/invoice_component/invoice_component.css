@@ -4,6 +4,14 @@ h1 {
   margin-bottom: 1em;
 }
 
+h3 {
+  font-weight: 100;
+  margin-top: 0;
+  border-bottom: 1px solid #dcb;
+  padding-bottom: 1em;
+}
+
+
 .block {
   padding: 2em;
 }
@@ -16,7 +24,7 @@ h1 {
   display: inline-block;
   padding: .3em .5em;;
   text-decoration: none;
-  background: #ccc;
+  background: #c0cacf;
   font-size: 10px;
   color: white;
   border-radius: 2px;
@@ -50,7 +58,8 @@ h1 {
 #total-row {
   width: 100%;
   position: relative;
-  background: #ffc;
+  background: #f0faff;
+  border: 1px solid #def;
 }
 
 td {
@@ -63,10 +72,79 @@ td {
 
 
 
-.label {
+label {
+  width: 100px;
+  display: inline-block;
+  font-weight: 100;
 }
 
 .total {
   text-align: right;
   font-weight: bold;
 }
+
+
+.submit {
+  margin: 1em 2em;
+  margin-left: 103px;
+  display: inline-block;
+  padding: .5em 1em;
+  text-decoration: none;
+  background: #036;
+  font-size: 14px;
+  color: white;
+  border-radius: 1px;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  border: 0 none;
+}
+
+.submit:hover {
+  text-decoration: none;
+  background: #039;
+  color: white;
+}
+
+input {
+  outline: none;
+}
+
+
+input[type='text'] {
+  border: 1px solid #777;
+  padding: 1em;
+  color: #999;
+}
+
+input[type='text']:focus {
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  box-shadow: 0 0 3px #eee;
+  border-color: #000;
+  color: #000;
+}
+
+
+
+.title {
+  width: 300px;
+}
+.amount {
+  width: 100px;
+}
+
+#add-form {
+  background: #ffe;
+  border: 1px solid #fed;
+  display: inline-block;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding: 1em;
+  float: right;
+}
+
+

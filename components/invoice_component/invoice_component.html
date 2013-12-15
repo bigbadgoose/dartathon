@@ -3,21 +3,21 @@
 
   <line-item line-item="item" ng-repeat="item in ctrl.invoice.lineItems"></line-item>
 
-  <a class="btn" href="" ng-click="ctrl.newLineItem()">New Line Item</a>
+  <a class="btn" href="" ng-click="ctrl.newLineItem()">+ New Line Item</a>
 
   <div ng-if="ctrl.isFormShown">
-    <div class="block">
+    <div class="block" id="add-form">
       <h3>New Line Item</h3>
       <div>
         <label>Title</label>
-        <input type="text" ng-model="ctrl.title" />
+        <input class="title" type="text" ng-model="ctrl.title" />
       </div>
       <div>
         <label>Amount</label>
-        <input type="text" ng-model="ctrl.amount" />
+        <input class="amount" type="text" ng-model="ctrl.amount" />
       </div>
       <div>
-        <input ng-click="ctrl.createLineItem()" type="submit" />
+        <input ng-click="ctrl.createLineItem()" type="submit" class="submit" />
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@
   <table id="total-row">
     <tr>
       <td>Total:</td>
-      <td class="total">{{ctrl.total()}}</td>
+      <td class="total">$ {{ctrl.total()}}</td>
     </tr>
   </table>
 </div>
