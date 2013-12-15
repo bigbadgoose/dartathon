@@ -1,0 +1,45 @@
+
+// -------------------------- MIXINS
+
+@mixin transition($trans: all 0.15s ease-out) {
+  -webkit-transition: $trans;
+  -moz-transition: $trans;
+  -ms-transition: $trans;
+  transition: $trans;
+}
+
+@mixin transform($xform: rotate(360deg)) {
+  -ms-transform: $xform;
+  -moz-transform: $xform;
+  -webkit-transform: $xform;
+  transform: $xform;
+}
+
+@mixin noselect {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@mixin fontawesome {
+  font-family: FontAwesome;
+}
+
+@mixin jumpfix {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+
+
+
+// -------------------------- SILENT MIXINS
+
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+

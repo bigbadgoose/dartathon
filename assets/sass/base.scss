@@ -1,0 +1,248 @@
+
+// -------------------------- RESET
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  vertical-align:baseline;
+  background:transparent;
+}
+article, aside, figure, footer, header, hgroup, nav, section {display:block;}
+nav ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after {content:'';content:none;}
+a {margin:0;padding:0;vertical-align:baseline;background:transparent;}
+ins {background-color:#ff9;text-decoration:none;}
+mark {background-color:#ff9;font-style:italic;font-weight:bold;}
+del {text-decoration:line-through;}
+abbr[title], dfn[title] {border-bottom:1px dotted #000;cursor:help;}
+table {border-collapse:collapse;border-spacing:0;}
+hr {display:block;height:1px;border:0;border-top:1px solid #ccc;margin:0;padding:0;}
+input, select {vertical-align:middle;}
+button { width:auto;overflow:visible;}
+
+
+
+// -------------------------- RESTYLE
+
+* {-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+html {-webkit-font-smoothing: antialiased; overflow-y: scroll;}
+body {
+  font-family: $sans;
+  font-size: $base;
+  color: $main;
+}
+
+h1,h2,h3,h4,h5,h6 {text-rendering:optimizeLegibility;}
+h1 {font-size:2.2em;}
+h2 {font-size:1.7em;}
+h3 {font-size:1.5em;}
+
+p {margin:5px 0;}
+a {outline:none;cursor:pointer;text-decoration:none;color:$link;}
+a:hover {text-decoration:underline;}
+
+ul {margin-left:30px;}
+ol {margin-left:30px;list-style-type:decimal;}
+
+small       {font-size:.8em;}
+strong, th  {font-weight:bold;}
+td, td img  {vertical-align:top;}
+sub         {vertical-align:sub;font-size:.6em;}
+sup         {vertical-align:super;font-size:.6em;}
+pre         {padding:15px;white-space:pre;white-space:pre-wrap;white-space:pre-line;word-wrap:break-word;}
+
+label, input[type=button], input[type=submit], button {cursor:pointer;}
+input[type="radio"] {vertical-align:text-bottom;}
+input[type="checkbox"] {vertical-align:bottom;*vertical-align:baseline;}
+textarea {}
+button {}
+
+blockquote {
+  padding: 10px;
+  margin: 20px 0;
+  background: #ffd;
+  border: 1px solid #ddc;
+}
+
+pre, code, kbd, samp {font-family:$mono;}
+hr {margin: 20px 0;}
+
+
+
+// -------------------------- UTIL
+
+.hide         {display:none;}
+.cloak        {visibility:hidden;}
+.no-select    {@include noselect;}
+.small        {font-size:$small;}
+.tiny         {font-size:$tiny;}
+
+
+
+// -------------------------- LAYOUT with baked in clearfixing
+
+.stack, .stack > li   {padding:0;margin:0;list-style-type:none;}
+.bar                  {padding:0;margin:0;list-style-type:none;}
+
+.bar {
+  > div, > li         {float:left;}
+  > li                {list-style-type:none;}
+}
+
+.boundary {
+  padding: 0;
+  margin: 0 auto;
+  width: $boundary;
+  position: relative;
+}
+
+.stack, .bar, .boundary { @extend %clearfix; }
+
+
+
+// -------------------------- GRID
+
+.bar {
+  &.double > div {
+    width: 49%;
+    margin-right: 2%;
+    &:last-child { margin-right: 0; }
+  }
+  &.triple > div {
+    width: 32%;
+    margin-right: 2%;
+    &:last-child { margin-right: 0; }
+  }
+  &.quad > div {
+    width: 24%;
+    margin-right: 1%;
+    &:last-child { margin-right: 0; }
+  }
+}
+
+
+
+// -------------------------- SPRITE
+
+.sprite {
+  background: url(image_path('sprites.png')) 0 0 no-repeat;
+  width: 25px;
+  height: 25px;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+// -------------------------- FORMS
+
+input[type="text"],
+textarea,
+select {
+  display: inline-block;
+  width: 210px;
+  padding: 4px;
+  line-height: 18px;
+  border: 1px solid #444;
+}
+input, textarea {
+  @include transition(border linear 0.2s);
+}
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: rgba(82, 168, 236, 0.8);
+}
+
+.form {
+  h2 {
+    background: #eee;
+    padding: 1em;
+    margin: 2em 0 1em;
+  }
+  .form-row {
+    margin-bottom: 20px;
+  }
+  &.horizontal {
+    .form-row {
+      position: relative;
+    }
+    .label {
+      display: inline-block;
+      width: 200px;
+      text-align: right;
+      margin: auto 0;
+      position: absolute;
+      top: 0; bottom: 0; left: 0; right: 0;
+      height: 50%;
+    }
+    .field {
+      display: inline-block;
+      margin-left: 220px;
+    }
+  }
+  .images-list {
+    font-size: $small;
+  }
+  input[type="text"] {
+    width: 300px;
+  }
+  .short-desc, .long-desc {
+    width: 700px;
+    height: 350px;
+    resize: vertical;
+  }
+  .short-desc {
+    height: 150px;
+  }
+  .actions {
+    padding: 1em;
+    margin-top: 1em;
+    border-top: 1px solid $grey;
+  }
+}
+
+
+
+// -------------------------- TABLE
+
+.table {
+  tr {
+    border-bottom: 1px solid $grey;
+  }
+  th, td {
+    padding: .5em 2em;
+    text-align: left;
+  }
+  tbody {
+    tr {
+      @include transition;
+      &:hover {
+        background: #ffe;
+      }
+    }
+  }
+}
+
+
+
+// -------------------------- COPY
+
+.copy {
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  p {
+    padding: 5px;
+    margin: 5px 0;
+  }
+}
+
